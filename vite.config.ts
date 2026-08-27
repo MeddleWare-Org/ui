@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   build: {
+    emptyOutDir: false,
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.ts'),
       name: 'MeddlewareUi',
@@ -17,7 +18,7 @@ export default defineConfig({
       output: {
         globals: { vue: 'Vue' },
         // Emit the base CSS alongside the JS bundle
-        assetFileNames: (info) => (info.names.includes('style.css') ? 'base.css' : (info.names[0] ?? 'asset')),
+        assetFileNames: () => 'base.css',
       },
     },
   },
