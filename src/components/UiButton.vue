@@ -1,8 +1,11 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
+    /** Visual style — primary (accent fill), secondary, ghost (outline), or danger (red). */
     variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
+    /** HTML button type attribute. Use 'submit' inside forms; 'button' otherwise. */
     type?: 'button' | 'submit' | 'reset'
+    /** When true, the button is rendered faded and blocks all interaction. */
     disabled?: boolean
   }>(),
   { variant: 'primary', type: 'button', disabled: false },
@@ -68,7 +71,7 @@ withDefaults(
 }
 .mw-btn--danger {
   background: var(--danger);
-  color: #fff;
+  color: var(--mw-neutral-000);
 }
 .mw-btn--danger:not(:disabled):hover {
   filter: brightness(1.08);

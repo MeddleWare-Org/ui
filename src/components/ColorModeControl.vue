@@ -8,6 +8,7 @@ import type { ColorMode } from '../composables/useColorMode'
  */
 withDefaults(
   defineProps<{
+    /** The currently selected colour mode (`v-model`). */
     modelValue: ColorMode
     /** Which modes to offer (default all three). */
     modes?: ColorMode[]

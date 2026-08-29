@@ -4,8 +4,9 @@ import { panelVars, type PanelVariant, type PanelColors } from '../internal/pane
 
 const props = withDefaults(
   defineProps<{
-    /** default transparent — footers usually sit over the page background. */
+    /** light | dark | transparent — default transparent (footers sit over the page background). */
     variant?: PanelVariant
+    /** Per-instance colour overrides; token values are used by default. */
     colors?: PanelColors
   }>(),
   { variant: 'transparent' },

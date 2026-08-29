@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'vue'
 
+/** Panel colour scheme: theme-independent `light`/`dark` panel tokens, or `transparent`. */
 export type PanelVariant = 'light' | 'dark' | 'transparent'
 
 /** Optional per-instance colour overrides (win over the token defaults). */

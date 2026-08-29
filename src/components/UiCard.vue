@@ -1,5 +1,8 @@
 <script setup lang="ts">
-defineProps<{ title?: string }>()
+defineProps<{
+  /** Optional card heading rendered in the header slot fallback. */
+  title?: string
+}>()
 </script>
 
 <template>

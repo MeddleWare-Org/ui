@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-/** Inline notice/alert. Abstracted from the token-deployer `AppNotice.vue`. */
-const props = defineProps<{ type?: 'info' | 'error' | 'ok' }>()
+const props = defineProps<{
+  /**
+   * Semantic intent — controls colour and ARIA role.
+   * - `'info'` (default): neutral informational note.
+   * - `'error'`: danger-coloured, sets `role="alert"` for assistive technologies.
+   * - `'ok'`: success-coloured, sets `role="status"`.
+   */
+  type?: 'info' | 'error' | 'ok'
+}>()
 
 const role = computed(() => {
   if (props.type === 'error') return 'alert'

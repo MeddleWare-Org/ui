@@ -4,9 +4,11 @@ import { panelVars, type PanelVariant, type PanelColors } from '../internal/pane
 
 const props = withDefaults(
   defineProps<{
+    /** light | dark | transparent — default dark (token defaults, overridable). */
     variant?: PanelVariant
+    /** Per-instance colour overrides; token values are used by default. */
     colors?: PanelColors
-    /** Sidebar width (CSS length). */
+    /** Sidebar width (CSS length, e.g. '280px'). Defaults to `--mw-sidebar-width` (240px). */
     width?: string
   }>(),
   { variant: 'dark' },

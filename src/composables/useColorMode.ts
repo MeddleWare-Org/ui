@@ -1,5 +1,6 @@
 import { ref, watch, type Ref } from 'vue'
 
+/** The user's colour-mode preference: force `light`/`dark`, or follow the OS with `system`. */
 export type ColorMode = 'light' | 'dark' | 'system'
 
 const STORAGE_KEY = 'mw-color-mode'
