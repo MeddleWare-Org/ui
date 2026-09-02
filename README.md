@@ -52,6 +52,7 @@ All three accept a `variant` prop:
 | `UiCard` | Card container with surface background and border. |
 | `UiSelect` | Styled select input. |
 | `UiNotice` | Notice / alert banner. |
+| `SidebarItem` | Navigation button for use inside `AppSidebar`. Accepts `label`, `icon`, `active`, and `disabled` props. |
 
 ### Colour mode
 

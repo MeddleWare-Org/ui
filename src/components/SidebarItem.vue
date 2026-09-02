@@ -1,0 +1,21 @@
+<script setup lang="ts">
+withDefaults(
+  defineProps<{ label: string; icon?: string; active?: boolean; disabled?: boolean }>(),
+  { active: false, disabled: false },
+)
+</script>
+<template>
+  <button type="button" class="sidebar-item" :class="{ 'is-active': active }"
+    :disabled="disabled" :aria-current="active ? 'page' : undefined">
+    <span v-if="icon" class="sidebar-item__icon" aria-hidden="true">{{ icon }}</span>
+    <span class="sidebar-item__label">{{ label }}</span>
+  </button>
+</template>
+<style scoped>
+.sidebar-item { display: flex; align-items: center; gap: 0.6rem; width: 100%; padding: 0.55rem 0.7rem; border: 0; border-radius: var(--mw-radius, 10px); background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; opacity: 0.85; }
+.sidebar-item:hover:not(:disabled) { background: color-mix(in srgb, currentColor 10%, transparent); opacity: 1; }
+.sidebar-item.is-active { background: color-mix(in srgb, var(--accent) 26%, transparent); opacity: 1; }
+.sidebar-item:disabled { cursor: default; }
+.sidebar-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sidebar-item__icon { width: 1.1rem; text-align: center; }
+</style>

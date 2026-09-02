@@ -3,6 +3,12 @@
 All notable changes to `@meddleware/ui` are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-09-02
+
+### Added
+
+- `SidebarItem` component — navigation button for use inside `AppSidebar`. Accepts `label`, `icon`, `active`, and `disabled` props. Uses `--mw-radius` and `--accent` design tokens.
+
 ## [0.1.1] - 2026-08-27
 
 ### Fixed
