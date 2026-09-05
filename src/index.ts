@@ -13,6 +13,11 @@ export { default as UiSelect } from './components/UiSelect.vue'
 export { default as UiNotice } from './components/UiNotice.vue'
 export { default as SidebarItem } from './components/SidebarItem.vue'
 
+export { default as StatusWidget } from './components/StatusWidget.vue'
+
 export { useColorMode } from './composables/useColorMode.js'
 export type { ColorMode } from './composables/useColorMode.js'
 export type { PanelVariant, PanelColors } from './internal/panel.js'
+
+export { isStatusLevel, parseSnapshot } from './status.js'
+export type { StatusLevel, StatusComponent, StatusGroup, StatusSnapshot } from './status.js'

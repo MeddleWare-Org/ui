@@ -3,6 +3,27 @@
 All notable changes to `@meddleware/ui` are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.5] - 2026-09-05
+
+### Added
+
+- `StatusWidget` component — polling status badge that links to the platform status page.
+  Accepts `apiUrl`, `href`, and `pollInterval` props with sensible defaults pointing at
+  `https://status.meddleware.co.uk`. Colours use design-token CSS vars (`--mw-ok-500`,
+  `--mw-gold-500`, `--mw-danger-500`) rather than hardcoded hex values.
+- `StatusLevel`, `StatusComponent`, `StatusGroup`, `StatusSnapshot` — TypeScript types
+  that mirror the `GET /api/status` response contract from `platform-probe`.
+- `isStatusLevel(s)` — type guard for validating a raw value against the `StatusLevel` union.
+- `parseSnapshot(raw)` — runtime validator that returns a typed `StatusSnapshot` or `null`
+  if the response shape is invalid, so callers treat a malformed response the same as a
+  network error rather than silently misreading it.
+
+## [0.1.4] - 2026-09-02
+
+### Added
+
+- `UiButton`, `UiCard`, `UiSelect`, `UiNotice` primitive components.
+
 ## [0.1.3] - 2026-09-02
 
 ### Added
